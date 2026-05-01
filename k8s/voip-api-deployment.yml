@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voip-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: voip-api
+  template:
+    metadata:
+      labels:
+        app: voip-api
+    spec:
+      containers:
+        - name: voip-api
+          image: voip-cloud-observability:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8000

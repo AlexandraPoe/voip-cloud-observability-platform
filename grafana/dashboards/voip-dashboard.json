@@ -1,0 +1,82 @@
+{
+  "annotations": {"list": []},
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 6, "x": 0, "y": 0},
+      "id": 1,
+      "options": {"reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""}},
+      "pluginVersion": "10.0.0",
+      "targets": [{"expr": "voip_asr_percent", "refId": "A"}],
+      "title": "ASR %",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 6, "x": 6, "y": 0},
+      "id": 2,
+      "options": {"reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""}},
+      "targets": [{"expr": "voip_avg_pdd_seconds", "refId": "A"}],
+      "title": "Average PDD Seconds",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 6, "x": 12, "y": 0},
+      "id": 3,
+      "options": {"reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""}},
+      "targets": [{"expr": "voip_avg_packet_loss_percent", "refId": "A"}],
+      "title": "Packet Loss %",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 6, "x": 18, "y": 0},
+      "id": 4,
+      "options": {"reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""}},
+      "targets": [{"expr": "voip_fas_suspects", "refId": "A"}],
+      "title": "FAS Suspects",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 6},
+      "id": 5,
+      "targets": [{"expr": "voip_route_health_status", "refId": "A"}],
+      "title": "Route Health Status",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 6},
+      "id": 6,
+      "targets": [{"expr": "voip_avg_latency_ms", "refId": "A"}],
+      "title": "Average Latency ms",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": ["voip", "observability", "prometheus"],
+  "templating": {"list": []},
+  "time": {"from": "now-15m", "to": "now"},
+  "timepicker": {},
+  "timezone": "",
+  "title": "VoIP Cloud Observability Platform",
+  "uid": "voip-observability",
+  "version": 1,
+  "weekStart": ""
+}
